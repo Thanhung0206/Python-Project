@@ -2,20 +2,20 @@ class Question:
     def __init__(self, prompt, answer):
         self.prompt = prompt
         self.answer = answer
-#Tạo câu hỏi --> để học sinh trả lời
+
 question_prompts = [
     "What color are apples?\n(a) Red/Green\n(b) Purple\n(c) Orange\n ",
     "What color are Bananas?\n(a) Teal\n(b) Magenta\n(c) Yellow\n",
     "What color are strawberries?\n(a) Yellow\n(b) Red\n(c) Blue\n"
 ]
-#Tạo bộ câu hỏi kèm đáp án
+
 questions = [
     Question(question_prompts[0], "a"),
     Question(question_prompts[1], "c"),
     Question(question_prompts[2], "b")
 ]
 
-#Tính điểm dựa trên câu trả lời
+
 def tinh_diem(questions):
     score = 0
     for i in questions:
@@ -26,4 +26,8 @@ def tinh_diem(questions):
 
 tinh_diem(questions)
 
-#Nên dùng class nếu không sẽ phải dùng for i in range len... và phải input(...[i])
+
+#B1: Tạo Clas Question để lưu trữ 2 tham số: Câu hỏi và đáp án
+#B2: Tạo question_prompts để lưu bộ câu hỏi 
+#B3: Tạo questions để gán bộ câu hỏi và bộ đáp án tương ứng với 2 tham số trong Question
+#B4: Tạo hàm def để thực hiện tính toán
